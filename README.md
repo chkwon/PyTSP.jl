@@ -47,9 +47,6 @@ using PyPlot
 
 fig = figure() 
 scatter(x, y)
-# for i, txt in enumerate(range(n_cities)):
-#     plt.annotate(txt, (x[i], y[i]))
-
 
 for i in 1:n_cities-1
     plot([x[tour[i]], x[tour[i+1]]], [y[tour[i]], y[tour[i+1]]])
