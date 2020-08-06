@@ -19,5 +19,6 @@ run(`$pip install git+git://github.com/jvkersch/pyconcorde.git`)
 run(`$pip install elkai`)
 
 # Install TravelingSalesmanExact.jl
+# Only to check pyconcorde solution (slower than concorde)
 Pkg.add("TravelingSalesmanExact")
 Pkg.add("GLPK")
