@@ -9,11 +9,11 @@ import PyCall
 
 # const pip = joinpath(Conda.BINDIR, "pip")
 
-proxy_arg = String[]
-if haskey(ENV, "http_proxy")
-    push!(proxy_arg, "--proxy")
-    push!(proxy_arg, ENV["http_proxy"])
-end
+# proxy_arg = String[]
+# if haskey(ENV, "http_proxy")
+#     push!(proxy_arg, "--proxy")
+#     push!(proxy_arg, ENV["http_proxy"])
+# end
 
 pip = `$(PyCall.python) -m pip`
 run(`$pip install --user --upgrade pip setuptools`)
