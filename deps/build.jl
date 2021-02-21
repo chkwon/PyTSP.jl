@@ -1,22 +1,28 @@
-using PyCall
+import PyCall
 
-PACKAGES = ["cython", "numpy", "elkai", "git+git://github.com/jvkersch/pyconcorde.git"]
+# , Conda
 
-try
-    pyimport("pip")
-catch
-    get_pip = joinpath(dirname(@__FILE__), "get-pip.py")
-    download("https://bootstrap.pypa.io/get-pip.py", get_pip)
-    run(`$(PyCall.python) $get_pip --user`)
-end
+# Conda.add("git")
+# Conda.add("pip")
+# Conda.add("cython")
+# Conda.add("numpy")
 
-pip = pyimport("pip")
-args = String[]
+# const pip = joinpath(Conda.BINDIR, "pip")
+
+proxy_arg = String[]
 if haskey(ENV, "http_proxy")
-    push!(args, "--proxy")
-    push!(args, ENV["http_proxy"])
+    push!(proxy_arg, "--proxy")
+    push!(proxy_arg, ENV["http_proxy"])
 end
-push!(args, "install")
-push!(args, "--user")
-append!(args, PACKAGES)
-pip.main(args)
+
+pip = `$(PyCall.python) -m pip`
+run(`$pip install --user --upgrade pip setuptools`)
+run(`$pip install --user cython numpy`)
+
+# Install pyconcorde (The Concorde TSP Solver + QSOpt LP Library)
+# https://github.com/jvkersch/pyconcorde
+run(`$pip install git+git://github.com/jvkersch/pyconcorde.git`)
+
+# Install elkai (The LKH Solver)
+# https://github.com/filipArena/elkai
+run(`$pip install elkai`)
