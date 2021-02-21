@@ -6,7 +6,13 @@
 
 This Julia package provides access to the [Concorde TSP Solver](http://www.math.uwaterloo.ca/tsp/concorde/index.html) and the [Lin-Kernighan-Held (LKH) solver](http://webhotel4.ruc.dk/~keld/research/LKH/) via [PyConcorde](https://github.com/jvkersch/pyconcorde) and [elkai](https://github.com/filipArena/elkai), respectively. 
 
-As both PyConcorde and elkai are Python libraries, this package merely provides a Julia wrapper using PyCall.
+As both PyConcorde and elkai are Python libraries, this package merely provides a Julia wrapper using PyCall. 
+
+In Windows, this package does not work. Consider using Windows Subsystem for Linux (WSL).
+
+## License
+
+MIT License only applies to PyTSP.jl. The Python parts, PyConcorde and elkai, come in difference licenses. The underlying solvers, thee Conrcorde TSP Solver and LKH, require special licenses for commercial usage. Please check their websites.
 
 ## Installation
 
