@@ -30,10 +30,10 @@ function tour_length(tour, M::Matrix{T}) where T
     return sum
 end
 
-function tour_length(tour, x, y) 
-    M = distance_matrix(x, y)
-    return tour_length(tour, M)
-end 
+# function tour_length(tour, x, y) 
+#     M = distance_matrix(x, y)
+#     return tour_length(tour, M)
+# end 
 
 function solve_TSP_Concorde(x, y; norm="EUC_2D",)
     Concorde = pyimport("concorde.tsp")
