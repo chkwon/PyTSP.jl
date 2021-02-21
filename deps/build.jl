@@ -1,6 +1,6 @@
 using PyCall
 
-PACKAGES = ["cython", "numpy", "elkai", "git+git://github.com/jvkersch/pyconcorde.git"]
+PACKAGES = ["setuptools", "cython", "numpy", "elkai", "git+git://github.com/jvkersch/pyconcorde.git"]
 
 try
     pyimport("pip")
