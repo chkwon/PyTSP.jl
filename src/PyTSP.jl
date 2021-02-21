@@ -4,11 +4,9 @@ module PyTSP
 
 using PyCall, Conda
 
-include("utils.jl")
 include("tsp_solvers.jl")
 
-export 
-    solve_TSP_Concorde, solve_TSP_LKH, 
-    construct_distance_matrix, tour_length
+export  solve_TSP_Concorde, solve_TSP_LKH, 
+        distance_matrix, tour_length, distance_matrix_float
 
 end
