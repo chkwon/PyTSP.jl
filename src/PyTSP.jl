@@ -2,7 +2,7 @@ module PyTSP
 
 # Write your package code here.
 
-using PyCall, Conda
+using PyCall
 
 include("tsp_solvers.jl")
 
