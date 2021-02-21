@@ -9,15 +9,15 @@ import PyCall
 
 # const pip = joinpath(Conda.BINDIR, "pip")
 
-proxy_arg=String[]
+proxy_arg = String[]
 if haskey(ENV, "http_proxy")
     push!(proxy_arg, "--proxy")
     push!(proxy_arg, ENV["http_proxy"])
 end
 
-pip = "$(PyCall.python) $(proxy_arg) -m pip"
+pip = `$(PyCall.python) -m pip`
 run(`$pip install --user --upgrade pip setuptools`)
-run(`$pip install --user git cython numpy`)
+run(`$pip install --user cython numpy`)
 
 # Install pyconcorde (The Concorde TSP Solver + QSOpt LP Library)
 # https://github.com/jvkersch/pyconcorde
