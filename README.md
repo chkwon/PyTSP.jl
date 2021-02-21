@@ -12,7 +12,7 @@ In Windows, this package does not work. Consider using Windows Subsystem for Lin
 
 ## License
 
-MIT License only applies to PyTSP.jl. The Python parts, PyConcorde and elkai, come in difference licenses. The underlying solvers, thee Conrcorde TSP Solver and LKH, require special licenses for commercial usage. Please check their websites.
+MIT License only applies to PyTSP.jl. The Python parts, PyConcorde and elkai, come in difference licenses. The underlying solvers, the Conrcorde TSP Solver and LKH, require special licenses for commercial usage. Please check their websites.
 
 ## Installation
 
@@ -42,7 +42,7 @@ tour, len = solve_TSP_Concorde(x, y, norm="EUC_2D")
 
 ### LKH
 
-Since LKH also benefits from integer inputs, this package uses intger as default type.
+Since LKH also benefits from integer inputs, this package uses integer as default.
 
 ```julia
 using PyTSP
