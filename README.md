@@ -16,7 +16,7 @@ MIT License only applies to PyTSP.jl. The Python parts, PyConcorde and elkai, co
 
 ## Installation
 
-`] add https://github.com/chkwon/PyTSP.jl`
+`] add PyTSP`
 
 ## Usage
 
