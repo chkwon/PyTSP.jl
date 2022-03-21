@@ -1,5 +1,12 @@
 # PyTSP.jl
 
+**Use the following direct Julia wrappers of Concorde and LKH, instead of PyTSP.jl.**
+
+- [Concorde.jl](https://github.com/chkwon/Concorde.jl): Julia wrapper of the [Concorde TSP Solver](http://www.math.uwaterloo.ca/tsp/concorde/index.html).
+- [LKH.jl](https://github.com/chkwon/LKH.jl): Julia wrapper of the [LKH heuristic solver](http://webhotel4.ruc.dk/~keld/research/LKH/).
+
+
+
 [![Build Status](https://github.com/chkwon/PyTSP.jl/workflows/CI/badge.svg?branch=master)](https://github.com/chkwon/PyTSP.jl/actions?query=workflow%3ACI)
 [![codecov](https://codecov.io/gh/chkwon/PyTSP.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/chkwon/PyTSP.jl)
 
@@ -9,11 +16,6 @@ This Julia package provides access to the [Concorde TSP Solver](http://www.math.
 As both PyConcorde and elkai are Python libraries, this package merely provides a Julia wrapper using [PyCall.jl](https://github.com/JuliaPy/PyCall.jl). 
 
 In Windows, this package does not work. Consider using Windows Subsystem for Linux (WSL).
-
-**Note: Now, there are direct Julia wrappers of Concorde and LKH, which work in Windows, macOS, and Linux 64-bit systems.**
-
-- [Concorde.jl](https://github.com/chkwon/Concorde.jl): Julia wrapper of the [Concorde TSP Solver](http://www.math.uwaterloo.ca/tsp/concorde/index.html).
-- [LKH.jl](https://github.com/chkwon/LKH.jl): Julia wrapper of the [LKH heuristic solver](http://webhotel4.ruc.dk/~keld/research/LKH/).
 
 
 ## License
